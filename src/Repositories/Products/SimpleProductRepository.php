@@ -304,7 +304,7 @@ class SimpleProductRepository extends Repository
 
                     array_push($attributeCode, $searchIndex);
 
-                    if ($value['type'] == "select") {
+                    if ($value['type'] == "select" && $searchIndex != "tax_category_id") {
                         $attributeOption = $this->attributeOptionRepository->findOneByField(['admin_name' => $csvData[$searchIndex]]);
 
                         array_push($attributeValue, $attributeOption['id']);
