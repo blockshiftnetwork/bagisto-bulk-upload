@@ -209,7 +209,7 @@ class SimpleProductRepository extends Repository
 
             return $dataToBeReturn;
         } catch (\Exception $e) {
-            Log::error('simple create product log: '. $e->getMessage());
+            \Log::error('simple create product log: '. $e->getMessage());
 
             $categoryError = explode('[' ,$e->getMessage());
             $categorySlugError = explode(']' ,$e->getMessage());
