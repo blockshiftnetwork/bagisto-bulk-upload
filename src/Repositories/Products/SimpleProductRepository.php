@@ -161,7 +161,7 @@ class SimpleProductRepository extends Repository
             if ($requestData['totalNumberOfCSVRecord'] < 1000) {
                 $processCSVRecords = $requestData['totalNumberOfCSVRecord']/($requestData['totalNumberOfCSVRecord']/10);
             } else {
-                $processCSVRecords = $requestData['totalNumberOfCSVRecord']/($requestData['totalNumberOfCSVRecord']/100);
+                $processCSVRecords = $requestData['totalNumberOfCSVRecord']/($requestData['totalNumberOfCSVRecord']/10);
             }
 
             $uptoProcessCSVRecords = (int)$requestData['countOfStartedProfiles'] + 10;
